@@ -1,3 +1,5 @@
+(function(){
+	'use strict';
 /*
 1. Envolva todo o conteúdo desse desafio em uma IIFE.
 2. Adicione a diretiva 'use strict';
@@ -15,6 +17,11 @@ E assim por diante, até a última.
 */
 console.log( 'As letras do seu nome:' );
 // ?
+var name = 'Diego';
+
+name.split('').forEach(function(item, index){
+	console.log(item + ' é a ' + (index+1) + ' letra do meu nome')
+});
 
 /*
 - Declare uma variável chamada `fullName`, que receba seu nome completo,
@@ -30,6 +37,17 @@ console.log para cada formato.
 */
 console.log( '\nNome convertido à partir de um slug:' );
 // ?
+var fullName = 'diego-de-paula';
+
+function convertString(name){
+	var newName = name.split('-').map(function(item) {
+	return item.length <= 2 ? item : item.charAt(0).toUpperCase() + item.slice(1);
+}).join(' ');
+	return newName;
+}
+
+console.log(convertString(fullName));
+
 
 /*
 - Crie um array com 5 nomes. Reduza esses nomes a uma única string, separando
@@ -42,6 +60,17 @@ O resultado final deve ficar mais ou menos assim:
 */
 console.log( '\nMeus amigos:' );
 // ?
+var array = ['Lorena', 'Renato', 'Silas', 'David', 'Estevão'];
+
+function presenting(name){
+	var phrase = name.reduce(function(item, atual, index){
+	var separator = name.length - 1 === index ? ' e ' : ', ';
+	return item + separator + atual;
+	})
+	return phrase + ' são meus amigos.';
+}
+
+console.log(presenting(array));
 
 /*
 Usando o replace(), faça a string "Roberto" virar "Roberta".
@@ -50,12 +79,19 @@ Mostre o resultado no console.
 console.log( '\nEra "Roberto", agora é:' );
 // ?
 
+var roberto = 'Roberto';
+console.log(roberto.replace('to', 'ta'));
+
 /*
 Mostre no console a parte "nando" da string "Fernando". Use o método que
 faz a busca do final para o início da string.
 */
 console.log( '\nParte de uma string:' );
 // ?
+
+var fer = 'Fernando';
+
+console.log(fer.substring(8, 3));
 
 /*
 Declare uma variável chamada `myName`, que receba o seu primeiro nome,
@@ -68,3 +104,8 @@ Ex.: Nomes que deveriam funcionar: "Fernando", "RoBertO", "gabriEla", etc.
 */
 console.log( '\nNome com letras intercaladas entre caixa alta e baixa:' );
 // ?
+var myName = 'Diego';
+console.log(myName.split('').map(function(item, index){
+	return index % 2 === 0 ? item.toLowerCase() : item.toUpperCase();
+}).join(''));
+})();
