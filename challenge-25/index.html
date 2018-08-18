@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Passes Counter 2000 Polishop</title>
+<style> 
+
+.buttonok {background-color:#4CAF50;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;"
+}
+
+.buttonerro
+{background-color:#FF0000;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #FF0000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #FF0000;
+}
+</style>
+</head>
+<body>
+<style>
+body	{background-color:#05270e;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+</style>
+
+	<div data-id="root">
+		<table border=0>
+			<tr>
+				<td>
+					<h4>Corretos Zona 1</h4>
+					<input type="text" data-js="front" value=0 readonly><br>
+					<button data-js="button" value="6" class="buttonok">Corretos</button>
+					<button data-js="button" value=0>←</button>
+				</td>
+				<td>
+					<h4>Errados Zona 1</h4>
+					<input type="text" data-js="frontFail" value=0 readonly><br>
+					<button data-js="button" value="7" class="buttonerro">Errados</button>
+					<button data-js="button" value=1>←</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h4>Corretos Zona 2</h4>
+					<input type="text" data-js="mid" value=0 readonly><br>
+					<button data-js="button" value="8" class="buttonok">Corretos</button>
+					<button data-js="button" value=2>←</button>
+				</td>
+				<td>
+					<h4>Errados Zona 2</h4>
+					<input type="text" data-js="midFail" value=0 readonly><br>
+					<button data-js="button" value="9" class="buttonerro">Errados</button>
+					<button data-js="button" value=3>←</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h4>Corretos Zona 3</h4>
+					<input type="text" data-js="back" value=0 readonly><br>
+					<button data-js="button" value="10" class="buttonok">Corretos</button>
+					<button data-js="button" value=4>←</button>
+				</td>
+				<td>
+					<h4>Errados Zona 3</h4>
+					<input type="text" data-js="backFail" value=0 readonly><br>
+					<button data-js="button" value="11" class="buttonerro">Errados</button>
+					<button data-js="button" value=5>←</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button data-js="button" value="12">Reset</button>
+				</td>
+			</tr>
+		</table>
+		<div>
+			<input type="text" data-js="timer" value="00:00:00" readonly> <br>
+			<button data-js="button" value="13">Start</button>
+			<button data-js="button" value="14">Pause</button>
+			<button data-js="button" value="15">Reset</button>
+		</div>
+	</div>
+	<script src="challenge-25.js"></script>
+</body>
+</html>
